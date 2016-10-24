@@ -3,7 +3,7 @@
 
 Some setup processes to get Ubuntu 16 ready to use after initial install
 
-Ubuntu 16 Server download is available from: [https://www.ubuntu.com/download/server](#[iso-download])
+Ubuntu 16 Server download is available from: [https://www.ubuntu.com/download/server][iso-download]
 
 ####   Network Setup   ####
 -----------------------------------------
