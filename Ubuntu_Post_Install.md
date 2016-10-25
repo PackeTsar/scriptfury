@@ -14,12 +14,13 @@ Ubuntu doesn't setup the network adapters during the initial install (like CentO
 
 2. Modify and enter the information below based on the adapters listed already in the file and the IP info you need to assign
 
-        iface ens160 inet static
+        auto eth0
+        iface eth0 inet static
                 address 192.168.1.100
                 netmask 255.255.255.0
                 gateway 192.168.1.1
                 dns-nameservers 8.8.8.8
-        iface ens160 inet6 static
+        iface eth0 inet6 static
                 address 2001:db8:1ce:1ce:babe::100/64
                 gateway 2001:db8:1ce:1ce:babe::1
                 dns-nameservers 2001:4860:4860::8888 2001:4860:4860::8844
