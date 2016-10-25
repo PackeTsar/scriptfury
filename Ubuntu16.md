@@ -91,9 +91,17 @@ You may have selected some level of automatic updates during the install, but it
 -----------------------------------------
 These are some packages I install on almost everything
 
-1. Python 2.X is something you will likely need
+1. **UBUNTU 16**: Python 2.X is something you will likely need
 
         sudo apt install python-minimal -y
+
+2. Open VM Tools is an open version of the VMWare Tools app. Useful if on a hypervisor
+
+        sudo apt install open-vm-tools -y
+
+3. A GIT client is a necessity if using a GIT repo
+
+        sudo apt install git -y
 
 
 
