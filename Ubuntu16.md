@@ -1,11 +1,11 @@
 # Ubuntu 16 Server ![logo]
-## Post-Install Setup
+# Post-Install Setup
 
 Some setup processes to get Ubuntu 16 ready to use after initial install
 
 Ubuntu 16 Server download is available from: [https://www.ubuntu.com/download/server][iso-download]
 
-####   Network Setup   ####
+###   Network Setup   ###
 -----------------------------------------
 Ubuntu doesn't setup the network adapters during the initial install (like CentOS does). So we have to login (using non-root user) to the KVM and set up the network as the first thing
 
@@ -43,7 +43,7 @@ Ubuntu doesn't setup the network adapters during the initial install (like CentO
 
 
 
-####   Enable Root User   ####
+###   Enable Root User   ###
 -----------------------------------------
 Ubuntu has the root user disabled by default and requires you to log in with a user created during the install process. Sometimes we need to enable the root account
 
@@ -61,7 +61,7 @@ Ubuntu has the root user disabled by default and requires you to log in with a u
 
 
 
-####   Update the OS   ####
+###   Update the OS   ###
 -----------------------------------------
 You may have selected some level of automatic updates during the install, but it is always a good idea to update your OS with the latest patches when you build it
 
@@ -75,7 +75,7 @@ You may have selected some level of automatic updates during the install, but it
 
 
 
-####   Install Useful Packages   ####
+###   Install Useful Packages   ###
 -----------------------------------------
 These are some packages I install on almost everything
 
@@ -85,7 +85,7 @@ These are some packages I install on almost everything
 
 
 
-####   Connect to SCP Share   ####
+###   Connect to SCP Share   ###
 -----------------------------------------
 We can use SSHFS to connect to another Linux box file system
 
