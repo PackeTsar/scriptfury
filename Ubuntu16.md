@@ -29,15 +29,20 @@ Ubuntu doesn't setup the network adapters during the initial install (like CentO
 
 4. Hit CTRL-X to exit the Nano editor
 
-5. Restart the networking stack to effect changes
+5. **UBUNTU 14**: Restart the networking stack to effect changes
+
+        sudo ifdown eth0
+        sudo ifup eth0
+
+6. **UBUNTU 16**: Restart the networking stack to effect changes
 
         sudo /etc/init.d/networking restart
 
-6. Check that the IP settings took
+7. Check that the IP settings took
 
         ip addr
 
-7. Ping something to check connectivity
+8. Ping something to check connectivity
 
         ping 8.8.8.8
 
@@ -52,8 +57,15 @@ Ubuntu has the root user disabled by default and requires you to log in with a u
         sudo passwd root
 2. Unlock the root account
 
-        sudo passwd -u root 
-3. Enable SSH login as root user (optional)
+        sudo passwd -u root
+
+3. **UBUNTU 14**: Enable SSH login as root user (optional)
+
+        sudo sed -i --follow-symlinks 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+
+        sudo service ssh restart
+
+3. **UBUNTU 16**: Enable SSH login as root user (optional)
 
         sudo sed -i --follow-symlinks 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
