@@ -119,5 +119,5 @@ We can use SSHFS to connect to another Linux box file system
 
 
 
-[logo]: http://www.packetsar.com/wp-content/uploads/packetsar-logo-tiny-100.png
+[logo]: http://www.packetsar.com/wp-content/uploads/script-fury-small.png
 [iso-download]: https://www.ubuntu.com/download/server
