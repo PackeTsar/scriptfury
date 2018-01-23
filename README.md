@@ -9,6 +9,7 @@ A random collection of scripts for various uses
 -----------------------------------------
 - [CentOS Minimal Server - Post-Install Setup][centos-post-install]
 - [Ubuntu Server - Post-Install Setup][ubuntu-post-install]
+- [Raspbian Lite - Post-Install Setup][raspbian-post-install]
 
 ####   Cisco Configuration Scripts   ####
 -----------------------------------------
@@ -26,6 +27,7 @@ A random collection of scripts for various uses
 
 [centos-post-install]: https://github.com/PackeTsar/scriptfury/blob/master/CentOS_Post_Install.md
 [ubuntu-post-install]: https://github.com/PackeTsar/scriptfury/blob/master/Ubuntu_Post_Install.md
+[raspbian-post-install]: https://github.com/PackeTsar/scriptfury/blob/master/Raspbian_Post_Install.md
 
 [cisco-ios-aaalocal]: https://github.com/PackeTsar/scriptfury/blob/master/Cisco-IOS_AAA_Local-Login.md
 [cisco-asa84-anyconnect]: https://github.com/PackeTsar/scriptfury/blob/master/Cisco-ASA8.4-Anyconnect-VPN.md
