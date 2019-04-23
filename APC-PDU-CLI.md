@@ -32,7 +32,7 @@ A config script for the management card which makes configuration a breeze compa
         tcpip -i 10.32.2.56
         tcpip -s 255.255.255.0
         tcpip -g 10.32.2.1
-        tcpip -d ibddomain.com
+        tcpip -d domain.com
 
 5. Set longer CLI prompt, disable TELNET, and enable SSH
 
