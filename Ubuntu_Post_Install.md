@@ -4,9 +4,45 @@ Some setup processes to get Ubuntu 14 or 16 ready to use after initial install
 
 Ubuntu Server download is available from: [https://www.ubuntu.com/download/server][iso-download]
 
-###   Network Setup   ###
+
+###   NMTUI Network Setup (Recommended)   ###
 -----------------------------------------
-Ubuntu doesn't setup the network adapters during the initial install (like CentOS does). So we have to login (using non-root user) to the KVM and set up the network as the first thing
+NMTUI (Network Manager Text User Interface) is an easy to use GUI which makes it easy to set up your networking. You must have internet access to install it.
+
+1. Install Network Manager
+
+        sudo apt install network-manager
+
+2. Enable the Network Managers service for startup and start the service
+
+        sudo systemctl enable NetworkManager
+        sudo systemctl start NetworkManager
+
+3. Use `sudo vi /etc/netplan/50-cloud- init.yaml` to make the file look like:
+
+```
+# This file is generated from information provided by
+# the datasource.  Changes to it will not persist across an instance.
+# To disable cloud-init's network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    version: 2
+    renderer: NetworkManager
+```
+
+4. Restart the server with `sudo shutdown -r now`
+
+5. Once back up, run the network manager with `nmtui`
+
+6. Edit your network settings and make sure to deactivate/activate the interface if you are on the console. If not on the console, reboot the server to have settings take effect
+
+7. Use `ip addr` to check that your settings took effect
+
+
+###   Manual Network Setup   ###
+-----------------------------------------
+If you didn't setup the network adapters during the initial install (like CentOS does), we have to login (using non-root user) to the KVM and set up the network as the first thing
 
 1. Open the 'interfaces' file for editing
 
