@@ -18,7 +18,7 @@ NMTUI (Network Manager Text User Interface) is an easy to use GUI which makes it
         sudo systemctl enable NetworkManager
         sudo systemctl start NetworkManager
 
-3. Use `sudo vi /etc/netplan/50-cloud- init.yaml` to make the file look like:
+3. Use `sudo vi /etc/netplan/50-cloud-init.yaml` to make the file look like:
 
 ```
 # This file is generated from information provided by
