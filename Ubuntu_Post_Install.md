@@ -31,13 +31,28 @@ network:
     renderer: NetworkManager
 ```
 
-4. Restart the server with `sudo shutdown -r now`
+4. Use `sudi vi /etc/NetworkManager/NetworkManager.conf` to make the file look like:
+```
+[main]
+plugins=ifupdown,keyfile
 
-5. Once back up, run the network manager with `nmtui`
+[keyfile]
+unmanaged-devices=*,except:type:ethernet
 
-6. Edit your network settings and make sure to deactivate/activate the interface if you are on the console. If not on the console, reboot the server to have settings take effect
+[ifupdown]
+managed=false
 
-7. Use `ip addr` to check that your settings took effect
+[device]
+wifi.scan-rand-mac-address=no
+```
+
+5. Restart the server with `sudo shutdown -r now`
+
+6. Once back up, run the network manager with `nmtui`
+
+7. Edit your network settings and make sure to deactivate/activate the interface if you are on the console. If not on the console, reboot the server to have settings take effect
+
+8. Use `ip addr` to check that your settings took effect
 
 
 ###   Manual Network Setup   ###
