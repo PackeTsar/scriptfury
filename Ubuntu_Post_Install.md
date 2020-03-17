@@ -31,7 +31,7 @@ network:
     renderer: NetworkManager
 ```
 
-4. Use `sudi vi /etc/NetworkManager/NetworkManager.conf` to make the file look like:
+4. Use `sudo vi /etc/NetworkManager/NetworkManager.conf` to make the file look like:
 ```
 [main]
 plugins=ifupdown,keyfile
