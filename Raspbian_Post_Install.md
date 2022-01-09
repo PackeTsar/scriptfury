@@ -24,21 +24,24 @@ An easy way to avoid this is to have the Pi enable SSH when it boots up and make
     - Password: raspberry
 
 
-4. Open the interfaces file (`sudo nano /etc/network/interfaces`). Modify the below config and add it to the file.
+4. Install Network Manager with:
 ```
-auto eth0
-iface eth0 inet static
-	address 192.168.1.10
-	netmask 255.255.255.0
-	gateway 192.168.1.1
-	dns-nameservers 8.8.8.8
+apt install network-manager
+systemctl enable NetworkManager
+systemctl start NetworkManager
+systemctl stop dhcpcd.service
+systemctl disable dhcpcd.service
 ```
 
+ > Make sure to stop the DHCPCD service or else the network stack will start resetting every few seconds
 
-5. Reboot the Pi to have the new IP take effect
+
+5. Reboot the Pi to have the new network settings take effect
 ```
 sudo shutdown -r now
 ```
+
+6. Run `nmtui` once Pi is back up and adjust network settings
 
 
 
@@ -71,10 +74,10 @@ cp /home/pi/.bashrc ~/.bashrc
 It is always a good idea to update your OS with the latest patches when you build it
 
 Update your Repo list
-`apt-get update`
+`apt update`
 
 Install all updates for the OS
-`apt-get -y upgrade`
+`apt upgrade -y`
 
 
 
@@ -88,7 +91,7 @@ These are some packages I install on almost everything
 
 2. A GIT client is a necessity if using a GIT repo
 
-`sudo apt-get install -y git`
+`sudo apt install -y git`
 
 
 
