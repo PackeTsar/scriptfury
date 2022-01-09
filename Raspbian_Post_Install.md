@@ -81,6 +81,28 @@ Install all updates for the OS
 
 
 
+###   Set Timezone   ###
+-----------------------------------------
+Adjust the OS timezone
+
+List the available timezones
+`timedatectl list-timezones`
+
+Set your preferred timezone
+`timedatectl set-timezone America/Los_Angeles`
+
+
+
+###   Check Temperature   ###
+-----------------------------------------
+Check the CPU temperature in C
+`head -n 1 /sys/class/thermal/thermal_zone0/temp | xargs -I{} awk "BEGIN {printf \"%.2f\n\", {}/1000}"`
+
+Check the CPU temperature in F
+`head -n 1 /sys/class/thermal/thermal_zone0/temp | xargs -I{} awk "BEGIN {printf \"%.2f\n\", ({}/1000*1.8)+32}"`
+
+
+
 ###   Install Useful Packages   ###
 -----------------------------------------
 These are some packages I install on almost everything
@@ -92,6 +114,14 @@ These are some packages I install on almost everything
 2. A GIT client is a necessity if using a GIT repo
 
 `sudo apt install -y git`
+
+3. Byobu is a terminal window manager
+
+`sudo apt install -y byobu`
+
+4. Fail2Ban will stop repeated attempts at SSH
+
+`apt install -y fail2ban`
 
 
 
