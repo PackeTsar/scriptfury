@@ -33,4 +33,4 @@ A random collection of scripts for various uses
 [cisco-asa84-anyconnect]: https://github.com/PackeTsar/scriptfury/blob/master/Cisco-ASA8.4-Anyconnect-VPN.md
 [cisco-asa84-ezvpn]: https://github.com/PackeTsar/scriptfury/blob/master/Cisco-ASA8.4-EZVPN.md
 
-[apc-pdu-cli]: https://github.com/PackeTsar/scriptfury/blob/master/APC-PDU-CLI.md
+[apc-pdu-cli]: /APC-PDU-CLI.md
